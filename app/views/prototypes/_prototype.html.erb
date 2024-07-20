@@ -7,11 +7,12 @@
 
   <div class="card-content">
     <h3 class="card-title">
-      <%= link_to prototype.name, prototype_path(prototype) %>
-      </h3>
+      <%= link_to prototype.name, prototype_path(prototype) %></h3>
     <p class="card-catch-copy"><%= prototype.catch_copy %></p>
     <p class="card-concept"><%= prototype.concept %></p>
-    <p class="card-user"><%= link_to "#{prototype.user.name}", prototype_path(prototype), class: 'prototype-link' %></p> 
+    <%# <p class="card-user"><%= link_to "#{prototype.user.name}", prototype_path(prototype), class: 'prototype-link'</p>  %>
+    <p class="card-user"><%= link_to "#{prototype.user.name}", user_path(prototype.user), class: 'prototype-link' %></p> 
+    <%# <%= link_to "by #{@prototype.user.name}", user_path(@prototype.user), class: "prototype__user" %> 
   </div>
 </div>
 
