@@ -1,0 +1,17 @@
+<div class="card">
+  <% if prototype.image.attached? %>
+   <%= link_to prototype_path(prototype) do %>
+    <%= image_tag prototype.image.variant(resize: '500x500'), class: 'prototype-image' %>
+   <% end %>
+  <% end %>
+
+  <div class="card-content">
+    <h3 class="card-title">
+      <%= link_to prototype.name, prototype_path(prototype) %>
+      </h3>
+    <p class="card-catch-copy"><%= prototype.catch_copy %></p>
+    <p class="card-concept"><%= prototype.concept %></p>
+    <p class="card-user"><%= link_to "#{prototype.user.name}", prototype_path(prototype), class: 'prototype-link' %></p> 
+  </div>
+</div>
+
